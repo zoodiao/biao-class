@@ -1,0 +1,22 @@
+/* 全局样式开始 */
+* { -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.body {
+    margin: 0;
+}
+.row {
+    font-size: 0; 
+}
+.col{
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: top;
+}
+       /* 全局样式结束 */
