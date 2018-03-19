@@ -3,20 +3,34 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.container{
+.container {
     width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
-.body {
+body {
     margin: 0;
+    background: #eee;
+    color: #555;
+    font-family: sans-serif, 'Microsoft';
+
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
 }
 .row {
-    font-size: 0; 
+    font-size: 0;
+    display: block; 
 }
-.col{
+.col {
     display: inline-block;
     font-size: 15px;
     vertical-align: top;
+}
+.col.right {
+    text-align: right;
 }
        /* 全局样式结束 */

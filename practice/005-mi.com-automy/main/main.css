@@ -1,0 +1,18 @@
+.main-promote .cat {
+    width: 20%;
+    background: rgba(0, 0, 0, .8);
+}
+
+.main-promote .slidar {
+    width: 80%;
+}
+.main-promote .cat a {
+      font-size: 75%;
+      display: block;
+      color: #eee;
+      padding: 8px 20px;
+}
+.main-promote {
+    background-image: url(slidar.jpg);
+}
+
