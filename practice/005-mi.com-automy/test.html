@@ -1,0 +1,51 @@
+<style>
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav {
+    background: gray;
+}
+
+.nav-item a {
+        display: inline-block;
+        padding: 10px;
+}
+
+.nav a:hover {
+    background: rgba(0,0,0,.5);
+    color: #fff;
+}
+
+.nav-item::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    background: rgba(0,0,0,.5);
+    width: 1px;
+    height: 20px;
+    top: 3px;
+}
+
+.nav-item:last-child:after {
+    display: none;
+}
+
+
+</style>
+<div class="nav">
+    <span>
+        <a class="nav-item" href="#">item</a>
+     </span>
+    <span>
+        <a class="nav-item" href="#">item</a>
+    </span>
+    <span>
+        <a class="nav-item" href="#">item</a>
+     </span>
+</div>
