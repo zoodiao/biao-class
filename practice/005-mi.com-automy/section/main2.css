@@ -2,26 +2,33 @@
 .section-cat .head .right {
     width: 50%;
 }
+
 .section-cat .head {
     margin: 20px 0;
 }
+
 .section-cat .head .title {
     font-size: 140%;
 }
+
 .card-group .other {
     width: 80%;
 }
+
 .section-cat .card {
-    width: 25%;
-    margin-left: 0;
+    width: 24%;
+    margin-left: 1%;
 }
+
 .card-group .leader {
     width: 20%;
-    margin-left: 0；
+    margin-left: 0;
 }
+
 .section-cat .card .thumb01 {
     padding: 10px;
 }
+
 .section-cat .other .row {
     margin-bottom: 5px;
 }
@@ -29,24 +36,33 @@
 .card-group .card {
     background: #fff;
 }
-.card {
+
+.card:hover {
+    border: 1px solid rgba(0,0,0.12);
+}
+
+.card:hover {
     -webkit-box-shadow: 0 0 4px rgba(0,0,0,.1);
     -moz-box-shadow: 0 0 4px rgba(0,0,0,.1);
     box-shadow: 0 0 4px rgba(0,0,0,.1);
 }
+
 .card .text {
     text-align: center;
     padding: 10px;
 
 }
+
 .card .title {
     color: #222;
     font-size: 90%;
 }
+
 .card .desc {
     color: #ccc;
     font-size: 70%;
 }
+
 .card .price {
     color: #ff6700;
 }
