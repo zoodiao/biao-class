@@ -1,0 +1,46 @@
+
+/* * { -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; } */
+body {
+   margin: 0;
+}
+.row {
+    font-size: 0;
+    
+
+}
+.col {
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+
+.left,.right {
+     width: 50%;
+}
+.right {
+    text-align: right;
+}
+.nav a {
+    text-decoration: none;
+    color: rgba(255,255,255,.8);
+    font-size: 80%;
+    display: inline-block;
+    padding: 10px 5px;
+}
+.nav {
+    background: #333;
+}
+.container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav a:hover {
+    background:rgba(33,33,33,.4);
+    color: white;
+}
