@@ -1,0 +1,153 @@
+.first-screen {
+    min-height: 500px;
+    background-image: url(../img/banner.jpg);
+    /* background-size: 150%; */
+    background-position: center 0;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+
+h1 {
+    font-size: 240%;
+    margin: 0;
+}
+
+h1,
+.nav a,
+.title .sub {
+      color: #eee;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.title .sup {
+    font-weight: lighter;
+}
+
+.center {
+    text-align: center;
+}
+
+.first-screen .center {
+    margin-top: 75px;
+}
+
+.nav {
+    margin-top: 10;
+}
+
+.nav .col.left {
+   width:30%;
+}
+
+.nav .col.right {
+    width: 70%;
+}
+
+.nav .link-group a {
+    font-size: 73%;
+}
+
+.nav .auth a {
+    font-size: 65%;
+    font-weight: normal;
+}
+
+.logo, .location {
+display: inline-block;
+vertical-align: middle;
+}
+
+.location {
+    padding: 5px;
+    background: rgba(0, 0,0, .4);
+    color: #eee;
+    font-size: 65%;
+    border-radius: 20px;
+}
+
+.logo {
+    width: 120px;
+    height: 60px;
+    background-image: url(../img/sprit.png);
+    background-repeat: no-repeat;
+    background-position: -8px -370px;
+}
+
+.location .icon-location,
+.location .name {
+    position: relative;
+}
+
+.location .icon-location {
+    top: 2px;
+}
+
+.location .name {
+    bottom: 3px;
+    right: 4px;
+}
+
+.icon-location {
+    margin-right: 3px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/sprit.png);
+    background-repeat: no-repeat;
+    background-position: -184px -17px; 
+}
+
+.search-area {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.search-area .type {
+    font-size: .75rem;
+}
+
+.search-area .type > * {
+    color: rgba(255, 255, 255, .4);
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.stay:hover {
+/* background: rgba(255, 255, 255, .4); */
+color: rgba(238, 238, 238,.9); 
+}
+
+.search-area .type > *.active {
+     color: #fff;
+}
+
+.search-input,
+.search-btn {
+     padding: 12px 15px;
+     border: 0;
+     line-height: 1.1;
+}
+
+.search-input {
+    width: 400px;
+}
+
+.search-btn {
+    color: #fff;
+    background: #00ae66;
+    cursor: pointer;
+}
+
+.nav a {
+   display:inline-block;
+   padding: 2px 10px;
+   font-weight: bold;
+}
+
+
+
