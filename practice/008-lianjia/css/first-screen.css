@@ -1,0 +1,140 @@
+.nav .col.left {
+    width: 30%;
+    
+}
+
+.first-screen .nav .col.right {
+    width: 70%;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav .col.right a {
+    color: #fff;
+    font-size: 90%;
+    font-weight: lighter;
+
+}
+
+.nav .col .auth {
+    font-size: 80%;
+}
+
+.first-screen {
+   min-height: 800px;
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    overflow: auto;
+}
+
+.logo,.location {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav .logo {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+    background: #333;
+}
+
+.location {
+    color: #fff;
+    font-size: 80%;
+    padding: 5px;
+}
+
+.center {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 75px;
+}
+
+
+
+h1,.title {
+    color: #fff;
+}
+
+h1 {
+    font-size: 280%;
+    margin: 0;
+}
+
+.title .sup-title {
+    margin: 15px 0px 40px 0px ;
+    font-size: 80%;
+
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.search-area {
+    font-size: 80%;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+.search-area .type span {
+    padding: 7px;
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.search-area .type .active {
+    color: #fff;
+}
+
+.search-area .type .stay:hover {
+    color: rgba(255,255,255,8);
+}
+
+/* .box {
+    font-size: 0.9rem;
+}
+
+.search-area input,
+.search-area button {
+    
+    display: inline-block;
+    margin: 0;
+    padding: 12px 15px; 
+    border: 0;
+    line-height: 1.1;
+}
+ .search-area input {
+     width: 400px;
+ } */
+
+ .search-area [type="search"] {
+     width: 80%;
+ }
+
+ .search-area [type="search"],
+ .search-area [type="submit"] {
+     display: inline-block;
+     /* font-size: 1rem; */
+     border: 1px solid rgba(0, 0, 0, .1);
+     padding: 10px;
+     font-size: .8rem;
+     line-height: 1.1;
+ }
+
+ .search-area [type="submit"] {
+     background: #00ae66;
+     width: 20%;
+     border-left: 0;
+ }
+
+ .search-area [type="submit"],
+.first-screen,
+.first-screen a {
+    color: #eee;}
