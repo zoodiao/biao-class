@@ -1,0 +1,48 @@
+.nav.global{
+    background: rgba(0, 0, 0, .7);
+}
+
+.nav.global a {
+    color: #fff;
+    font-size: .8rem;
+    padding: 6px;
+    margin: 6px 0 6px 0;
+}
+
+.nav.global a,.page a {
+    display: inline-block;
+}
+
+#logo {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: #ff6700;
+    background-image: url(../img/mi-logo.png);
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#search-area {
+    display: block;
+    font-size: 0;
+}
+
+#search,
+#search-submit {
+    line-height: 1.1;
+}

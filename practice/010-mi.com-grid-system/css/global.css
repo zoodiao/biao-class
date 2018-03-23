@@ -1,15 +1,38 @@
-<style>
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    
-  }
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 
-  .row {
+.body {
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.row {
     font-size: 0;
     display: block;
-  }
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right {
+  text-align: right;
+}
 
   .col,
   .col-1,
@@ -28,9 +51,10 @@
     font-size: 1rem;
     vertical-align: top;
 
-    height: 30px;
-    border: black solid 2px;
-    margin-bottom: 30px;}
+    /* height: 30px; */
+    /* border: black solid 1px; */
+    /* margin-bottom: 30px; */
+  }
 
 
     .col-1 {
@@ -78,27 +102,3 @@
   .col-12 {
     width: 100%;
   }
-  .row {
-    text-align: center;
-   }
-</style>
-
-<div class="row">
-    <div class=" col-4">yo</div>
-    <div class=" col-4">yo</div>
-    <div class=" col-4">yo</div>
-</div>
-<div class="row">
-    <div class="col-1"></div>
-    <div class="col-5"></div>
-    <div class="col-1"></div>
-    <div class="col-5"></div>
-</div>
-<div class="row">
-    <div class="col-2"></div>
-    <div class="col-2"></div>
-    <div class="col-2"></div>
-    <div class="col-2"></div>
-    <div class="col-2"></div>
-    <div class="col-2"></div>
-</div>
