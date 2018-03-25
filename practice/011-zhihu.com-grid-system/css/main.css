@@ -169,7 +169,6 @@
 
 .card > * {
     padding: 4px;
-    margin: 2px;
 
 }
 
@@ -184,6 +183,36 @@
 
 h2 {
     font-size: 180%;
+}
+
+.content {
+    display: inline-block;
+    margin-bottom: 10px；
+}
+
+.card .link-group > * {
+    display: inline-block;
+    padding: 0px 6px 0px 6px;
+    margin-right:6px;
+    margin-left: 6px;
+    font-size: .65rem;
+    border: 1px solid #0084ff;
+    background: #0084ff;
+    color: #eee;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.card .link-group span button {
+    border: 1px solid #0084ff;
+    background: #0084ff;
+    color: #eee;
+    cursor: pointer;
+    font-size: .81rem;
+}
+
+.card .link-group span button:hover {
+    color:tomato;
 }
 
 .footer {
