@@ -2,12 +2,13 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-}
-
-.body {
+  }
+  
+  body {
     font-size: 14px;
     font-family: sans-serif;
-    color: #333;
+    color: #8590a6;
+    background: #f6f6f6;
 }
 
 .row {
@@ -51,8 +52,8 @@ img {
     font-size: 1rem;
     vertical-align: top;
 
-    height: 30px;
-    border: black solid 1px;
+    /* height: 30px;
+    border: black solid 1px; */
     /* margin-bottom: 30px; */
   }
 
