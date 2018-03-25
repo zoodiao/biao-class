@@ -1,0 +1,30 @@
+.nav.global {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,.1);
+}
+
+.nav.global a {
+    display: inline-block;    
+}
+
+#search-area {
+    font-size: 0;
+    display: inline-block;
+    position: relative;
+    top: -23px;
+}
+
+#search,
+#search-submit {
+    font-size: .7rem;
+    
+}
+#search {
+    border-right:0; 
+}
+
+#search-submit {
+    border-left: 0;
+}
+
