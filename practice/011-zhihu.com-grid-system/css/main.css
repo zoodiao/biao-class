@@ -130,10 +130,9 @@
 .sidebar {
     position: fixed;
     top: 62px;
-    /* bottom: 9px; */
-    left: 843px;
+    left: 1004px;
     width: auto;
-    /* right: 1px; */
+    
 }
 
 .sidebar .link-group a {
