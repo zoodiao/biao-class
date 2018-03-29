@@ -1,0 +1,54 @@
+#logo {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background: #ff6700;
+    background-image: url(../../img/mi-logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.nav.page a {
+    font-size: .9rem;
+    color: #000;
+    padding: 10px 5px 10px 5px;
+}
+
+.nav.page a:hover {
+    color: #ff6700;
+}
+
+.nav.page {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.search-area {
+    font-size: 0;
+    position: relative;
+    top: 4px;
+}
+
+#search,
+#search-sumbit {
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1.1;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.2);
+    color: #000;
+}
+
+#search-submit {
+    border-left: 0;
+}
+
+#search {
+    outline: 0;
+}
+
+#search:focus {
+    border-color: #ff6700;
+}
