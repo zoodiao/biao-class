@@ -1,0 +1,110 @@
+.nav {
+    max-width: 1226px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+}
+
+.nav .logo {
+    display: block;
+    width: 200px;
+    height: 98px;
+    background-image: url(../../img/store-logo.png)
+}
+
+.nav .logo,
+.body {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.body {
+    display: block;
+    text-align: right;
+    background-image: url(../../img/login-bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#login {
+    background: #fff;
+    padding: 20px;
+    display: inline-block;
+    width: 280px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tap-head-group {
+    text-align: center;
+}
+
+.tap-head {
+    font-size: 1.1rem;
+    padding: 10px;
+    position: relative;
+    color: #666;
+}
+
+.others {
+    cursor: pointer;
+} 
+
+.others .tal.active {
+    color: #ff6700;
+}
+
+.others .tar:hover {
+    color: #ff6700;
+}
+
+.tap-head::after {
+    content: '';
+    display: inline-block;
+    background: #ccc;
+    width: 2px;
+    height: 20px;
+    position: absolute;
+    right: -1px;
+    top: 16px;
+}
+
+.tap-head:last-child::after {
+    display: none;
+}
+
+.tap-head.active {
+    color: #ff6700;
+}
+
+.tap-head:last-child:hover {
+    color: #ff6700;
+    cursor: pointer;
+}
+
+.social-login-tac-muted {
+    font-size: 80%;
+    text-align: center;
+}
+
+.input-area {
+    margin-bottom: 100px;
+}
+
+
+
+.others > * {
+    font-size: .6rem;
+}
+
+.footer {
+    font-size: .8rem;
+    padding: 50px;
+    text-align: center;
+    color: gray;
+}
+
+.footer > * {
+    display: block;
+    padding: 5px;
+}

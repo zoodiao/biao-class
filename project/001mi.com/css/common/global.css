@@ -4,21 +4,56 @@
     -moz-box-sizing: border-box;
 }
 
-a {
+a span {
     text-decoration: none;
     display: inline-block;
 }
 
 body {
     margin: 0px;
-    font: 13px;
+    font-size: 13px;
     font-family:  sans-serif;
     color: #333;
+    line-height: 1.5;
+}
+
+input,button {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0,.1);
+    color: inherit;
+
+}
+
+button.entry-key {
+    background: #ff6700;
+    color:#fff;
+    cursor: pointer;
+}
+
+input,
+button.entry-key {
+    width: 100%;
+}
+
+.input-group {
+    margin: 10px 0;
 }
 
 img {
     max-width: 100%;
     display: block;
+}
+
+.tac {
+    text-align: center;
+}
+
+.tal {
+    text-align: left;
+}
+
+.tar {
+    text-align: right;
 }
 
 .row {
