@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no,
+         initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.row {
+    display: block;
+}
+
+.row::after,
+.row::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col {
+/* background: #000; */
+float: left;
+width: 50%;
+border: 2px solid #666;
+min-height: 50px;
+}
+
+@media (max-width: 500px) {
+    .col {
+        width: 100%;
+    }
+}
+
+</style>
+
+
+    <body>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+    </body>

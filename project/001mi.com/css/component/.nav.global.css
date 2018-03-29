@@ -1,0 +1,9 @@
+.row.nav.global {
+    background: #333;
+    overflow: hidden;
+}
+.row.nav.global a {
+    color:#b0b0b0;
+    font-size: .8rem;
+    padding: 8px;
+}
