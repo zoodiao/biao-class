@@ -33,3 +33,127 @@
     display: none;
 }
 
+.pro-desc {
+    font-size: .8rem;
+}
+.pro-desc .text.active,
+.pro-desc .price {
+    color: #ff6700;    
+}
+
+.pro-desc .price {
+    font-weight: bold;
+    font-size: 1rem; 
+    padding: 10px 0;
+}
+
+.book-time .row.title {
+    background:#ff6700;
+    color: #fff;
+    padding: 10px; 
+}
+
+.book-time .row.title > * {
+    font-size: .8rem;
+}
+
+.book-time .price {
+    background: #f9f9fa;
+    padding: 20px 10px 20px 40px;
+    color: #ff6700;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.shipping-address .localtion {
+    background: #f9f9fa;
+    padding: 40px;
+    font-size: .9rem;
+    border: 1px solid rgba(0, 0, 0, .1)
+}
+
+.pro-versions .row.pill {
+    width: 65%;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 7px 10px 7px 10px;
+    margin-bottom: 25px;
+}
+
+.pro-versions .row.pill {
+    cursor: pointer;
+}
+
+
+.pro-versions .pill.active {
+    border: 1px solid #ff6700;
+}
+
+
+
+.pro-versions .row.pill .price {
+    color: #777;
+}
+
+.pro-versions .pill.active .price {
+    color: #222;
+}
+
+.pro-color .black,
+.pro-color .white {
+    width: 30%;
+    padding: 7px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.service .right,span {
+    font-size: .9rem;
+}
+
+.service .col-3.right {
+    display: inline-block;
+    position: relative;
+    top: 21px;
+    color: #ff6700;
+}
+
+.service span {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 40px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.total-price {
+    background: #f9f9fa;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 30px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+
+.total-price .desc > * {
+    font-size: .75rem;
+    color: #666;
+}
+
+.total-price .price {
+    color: #ff6700;
+    font-weight: bold;
+    padding: 20px 0 0 0; 
+
+}
+
+.buy button {
+    width: 320px;
+    text-align: center;
+    background: #ff6700;
+    color: #fff;
+    border: 0;
+    margin-top: 7px;
+}
