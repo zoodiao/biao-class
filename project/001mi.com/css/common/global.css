@@ -4,7 +4,7 @@
     -moz-box-sizing: border-box;
 }
 
-a span {
+a,span {
     text-decoration: none;
     display: inline-block;
 }

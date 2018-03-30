@@ -1,0 +1,79 @@
+<style>
+    .row {
+       display: flex;
+       border: dashed;
+    }
+
+.col,[class^="col-"] {
+    background: #555;
+    border: 1px solid rgba(0, 0, 0, rgba(0, 0, 0, .4));
+    padding: 10px;
+    margin: 5px;
+}
+
+.col-1 {
+    flex:1;
+}
+.col-2 {
+    flex:2;
+}
+.col-3 {
+    flex:3;
+}
+.col-4 {
+    flex:4;
+}
+.col-5 {
+    flex:5;
+}
+.col-6 {
+    flex:6;
+}
+.col-7 {
+    flex:7;
+}
+.col-8 {
+    flex:8;
+}
+.col-9 {
+    flex:9;
+}
+.col-10 {
+    flex:10;
+}
+.col-11 {
+    flex:11;
+}
+.col-12 {
+    flex:12;
+}
+
+/* a {
+display: inline;
+} */
+
+</style>
+
+<div class="row">
+    <div style="flex:1;" class="col">第一份</div>
+    <div style="flex:3;" class="col">
+
+    </div>
+    <div style="flex:3;" class="col">第三份</div>
+</div>
+<div class="row">
+    <div class="col-8">
+        <div class="row">
+                <div style="background:tomato;" class="col-2">
+                    <a style="display:block;" href="#">a</a>
+                    <a style="display:block;" href="#">b</a>
+                    <a style="display:block;" href="#">c</a>
+                </div> 
+                <div style="background:tomato;" class="col-4">df</div> 
+                <div style="background:tomato;" class="col-7">gf</div> 
+        
+        </div>
+    </div>
+    <div class="col-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias neque libero ad cupiditate dicta? Expedita cupiditate vero illo cum dolore quisquam inventore provident quam officia, est consequatur ea. Accusamus, voluptatum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas consequatur debitis, alias esse rerum et quod, laboriosam cupiditate animi officiis aliquam praesentium voluptatum totam repudiandae repellat, quidem temporibus similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, impedit, mollitia labore tempora exercitationem voluptas eius eveniet accusantium sint expedita non corrupti maiores neque! Suscipit incidunt vitae reiciendis rem corrupti.</div>
+    <div class="col-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti accusantium animi atque cum unde neque blanditiis. Voluptatem, voluptates, illo obcaecati facilis odit harum molestias possimus minus iure velit eos maxime.</div>
+</div>

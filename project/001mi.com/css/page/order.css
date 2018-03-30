@@ -1,0 +1,34 @@
+.nav-order span {
+    font-size: 0.85rem;
+}
+
+.nav-order .link-group a {
+    position: relative;
+    font-size: 0.75rem;
+    color: #333;
+    padding: 5px;
+}
+
+.nav-order {
+    display: block;
+    padding: 12px;
+    background: #ffff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+}
+
+.nav-order .link-group a::after {
+    content: '';
+    display: inline-block;
+    background: #ccc;
+    width: 2px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+    right: -5px;
+
+}
+
+.nav-order .link-group a:last-child::after {
+    display: none;
+}
+
