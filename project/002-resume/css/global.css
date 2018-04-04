@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
 .row {
     font-size: 0;
 }
@@ -25,9 +31,17 @@ a {
     margin-bottom: 20px;
 }
 
+.list {
+    display:block;
+    background: rgba(0,0, 0,.5);
+    background-position: center;
+    padding-bottom: 40%;
+}
+
 .list > * {
     display: block;
     padding: 15px;
+    color: #eee;
 }
 
 .col,
