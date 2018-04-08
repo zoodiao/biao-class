@@ -1,0 +1,56 @@
+.row.first-screen {
+    background-image: url(../../img/first-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center top;
+    min-height: 776px;
+    position: relative;
+}
+
+h2 {
+    font-size: 260%;
+    margin: 0;
+}
+
+h2 .divider {
+    background: #b08a43;
+    width: 8%;
+    display: block;
+    height: 7px;
+    margin: 40px 0; 
+    font-weight: 800;
+}
+
+.main-list,
+.main-title {
+    position: absolute;
+    top: 545px;
+}
+
+.main-list button {
+    background: #b08a43;
+    width: 20%;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 10px;
+    margin: 7px;
+    cursor: pointer;
+}
+
+.main-list button:hover {
+    background: #e9c686;
+}
+
+h2 .divider:hover {
+    cursor: pointer;
+}
+
+.picture.turn .main-title .text {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.picture.turn .main-title > * {
+    color: #fff;
+}

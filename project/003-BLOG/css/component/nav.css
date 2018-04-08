@@ -1,0 +1,60 @@
+
+#search,
+#search-sumbit,
+.row.nav {
+    background: #222327;
+    color: #d2d2d2;
+}
+
+.row.nav a {
+    color: #d2d2d2;
+}
+
+.nav .link-group a {
+    position: relative;
+    padding: 15px;
+    /* top: 19px; */
+    line-height: 50px;
+
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: 8px;
+}
+
+.nav .link-group a:hover {
+    background: #4a4b4e;
+    cursor: pointer;
+}
+
+.search-area {
+    font-size: 0;
+    width: 60%;
+    position: relative;
+    top: 20px;
+}
+
+#search,
+#search-sumbit {
+    display: inline-block;
+    font-size: .8rem;
+    line-height: 1.1;
+    padding: 10px;
+    border: .7px solid #d2d2d2;
+    border-radius: 15px;
+    
+}
+
+#search-sumbit {
+    border: none;
+}
+
+#search-sumbit:hover {
+    color: #d8d8d8;
+     cursor: pointer;
+}
+
+
