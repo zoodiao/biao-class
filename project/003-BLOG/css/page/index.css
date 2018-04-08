@@ -6,7 +6,23 @@
     background-position: center top;
     min-height: 776px;
     position: relative;
+    margin-bottom: 30px;
 }
+
+.picture.turn {
+    transform: translateY(420px);
+    font-size: 0;
+}
+
+.picture.turn .main-title .text {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.picture.turn .main-title > * {
+    color: #fff;
+}
+
 
 h2 {
     font-size: 260%;
@@ -22,10 +38,12 @@ h2 .divider {
     font-weight: 800;
 }
 
-.main-list,
-.main-title {
-    position: absolute;
-    top: 545px;
+h2 .divider:hover {
+    cursor: pointer;
+}
+
+h2 .divider:hover {
+    cursor: pointer;
 }
 
 .main-list button {
@@ -42,15 +60,41 @@ h2 .divider {
     background: #e9c686;
 }
 
-h2 .divider:hover {
-    cursor: pointer;
+.hot.title h2 {
+    background:  #222327;
+    color: #d2d2d2;
+    padding: 8px;
+    margin-bottom: 10px;
 }
 
-.picture.turn .main-title .text {
-    font-weight: bold;
-    font-size: 1.2rem;
+.main .card {
+    background: rgba(0, 0, 0, .1);
+    margin-bottom: 20px;
 }
 
-.picture.turn .main-title > * {
-    color: #fff;
+.card-title h2 {
+    font-size: 180%;
+    padding-bottom: 10px;
+}
+
+.desc span {
+    display: block;
+    padding: 8px;
+    font-size: .86rem;
+}
+
+.desc .active {
+    background:  #222327;
+    color: #d2d2d2;
+}
+
+.desc .score {
+    color: tomato;
+    font-size: 2rem;
+    margin: 5px;
+}
+
+.desc a {
+    display: block;
+    padding: 5px;
 }

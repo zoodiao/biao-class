@@ -1,4 +1,14 @@
 
+.row.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.row.nav .container {
+    max-width: 100%;
+}
+
 #search,
 #search-sumbit,
 .row.nav {
@@ -22,7 +32,8 @@
     width: 80px;
     height: 80px;
     position: relative;
-    top: 8px;
+    top: 9px;
+    left: 8px;
 }
 
 .nav .link-group a:hover {

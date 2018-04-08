@@ -1,0 +1,38 @@
+.footer {
+    margin-top: 40px;
+    background: #2e3035;
+    color: #d2d2d2;
+}
+
+.footer i {
+    padding: 30px 20px 30px 20px;
+}
+
+.footer .col-3 {
+    text-align: center;
+}
+
+.footer .link-group .qq:hover {
+    background: rgba(102, 149, 235, 0.7);
+}
+
+.footer .link-group .weibo:hover {
+    background: rgba(246, 168, 43, 0.801);
+}
+
+.footer .link-group .github:hover {
+    background: rgba(153, 11, 209, 0.801);
+}
+
+.footer .link-group .weixin:hover {
+    background: rgba(32, 226, 14, 0.801);
+}
+
+.footer.last {
+    background: #222327;
+    color: #d2d2d2;
+    width: 100%;
+    height: 300px;
+    margin: 0;
+
+}
