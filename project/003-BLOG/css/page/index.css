@@ -98,3 +98,19 @@ h2 .divider:hover {
     display: block;
     padding: 5px;
 }
+
+.row.first-screen {
+    position: relative;
+    display: inline-block;
+    margin-top: 82px;
+    width: 100%; 
+}
+
+.mesc {
+    position:absolute;
+    background: rgba(0, 0, 0, .3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
