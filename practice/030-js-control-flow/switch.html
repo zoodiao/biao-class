@@ -5,7 +5,7 @@
 <input type="number" id="phone" placeholder="号码">
 <script>
     var name_element = document.querySelector('#name');
-    var phone_element = document.querySelector('phone');
+    var phone_element = document.querySelector('#phone');
     var age_element = document.querySelector('#age');
     age_element.addEventListener('change', function () {
         var age = age_element.value;
@@ -42,7 +42,7 @@
             console.log('请输入号码');
         } else if (phone.length != 11 ||
             !phone.startsWith('1')) {
-            console.log('号码格式有误')
+            console.log('号码格式有误');
         }
         else {
             console.log('你真棒');
