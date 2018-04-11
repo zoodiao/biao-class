@@ -34,19 +34,20 @@
         }
     })
 
-    phone_element.addEventListener('change',function () {
+    phone_element.addEventListener('change', function () {
         var phone = phone_element.value.trim();
-        phone = parseInt(phone);
 
         if (!phone) {
             console.log('请输入号码');
         } else if (phone.length != 11 ||
-            !phone.startsWith('1')) {
-            console.log('号码格式有误');
-        }
+            !phone.startsWith('1') ||
+            !parseInt(phone)
+        ) {
+        console.log('号码格式有误');
+    }
         else {
-            console.log('你真棒');
-        }
+        console.log('你真棒');
+    }
 
     })
 
