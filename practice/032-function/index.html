@@ -1,0 +1,85 @@
+<script>
+    //     ;(function() {
+    //     'use strict';
+
+    // })();
+
+    //严格模式
+    // ; (function () {
+
+    //     'use strict';
+    //     var arr = [12,34,56,78];
+    //     function array_sum(arr) {
+    //         var sum = 0;
+    //         for(var i = 0;i<arr.length;i++){
+    //             var item = arr[i];
+    //             sum = sum + item;
+    //         }
+    //         console.log(sum);
+    //     }
+    //     array_sum(arr);
+
+
+
+
+
+
+
+    // })();
+    // var name = 'whh';
+    // function sayHi() {
+    //     name = 'lsd';
+    //     console.log('hi',name);
+    // }
+    // sayHi();
+    // console.log(name)
+
+    // var name = 'pdd';
+    // function sayHi() {
+    //     name = 'nbb';
+    //     console.log('回家吧', name);
+
+    // }
+    // sayHi();
+    // console.log(name);
+    ; (function () {
+        'use strict';
+
+        function search(keyword) {
+            var list = [
+                {
+                    name: '王花花',
+                    playing: ['CS', '红警'],
+                },
+                {
+                    name: '李拴蛋',
+                    playing: ['守望屁股', '吃鸡', 'CS'],
+                },
+                {
+                    name: '牛备备',
+                    playing: ['红警', '吃鸡'],
+                },
+            ]
+
+            var result = [];
+
+            for (var i = 0; i < list.length; i++) {
+                var item = list[i];
+
+                var playing = item.playing;
+                if (playing.indexOf(keyword) != -1) {
+
+                    result.push(item.name);
+                }
+                console.log(result);
+            }
+        }
+
+        search('CS');
+
+
+
+
+
+    })()
+</script>

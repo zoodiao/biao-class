@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<script>
+    var list = ['a1', 'a2', ['b1', 'b2', ['c1', 'c2', 'c3'], 'b3'], 'a3'];
+    var obj = {};
+    for (var i = 0; i < list.length; i++) {
+        var item = list[i];
+        if (!obj[item]) {
+            obj[item] = [item];
+        } else {
+            obj[item].push(item);
+        }
+    }
+    for (var i in obj) {
+    }
+    console.log(obj[i]);
+
+    var arr = [2, 4, 6, 8, 10];
+    var sum = 0;
+    var i;
+    for (i = 0; i < arr.length; i++) {
+        var num = arr[i];
+        sum = sum + num;
+    }
+    console.log(sum);
+
+    var arr = [];
+    for (var i = 0; i < 5;i++) {
+        arr.push(i+1);
+
+    }
+    onsole.log(arr);
+
+//         console.log('第一组：' + a);
+//         for (var j = 0; j < a.length; j++) {
+//             var b =a[j];
+//             console.log('第二组：' + b);
+//         }
+// }
+
+
+</script>
