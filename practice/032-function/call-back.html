@@ -1,0 +1,66 @@
+<script>
+//     function sleep(before,after,then) {
+//         if (before)
+//             before();
+//         console.log('睡觉咯');
+//         if (after)
+//         after();
+//         if (then)
+//         then();
+//     }
+//     function dream() {
+//         console.log('做梦咯');
+//     }
+// function see() {
+//     console.log('梦见了表哥叫我写代码');
+// }
+
+//     function brush_teeth() {
+//         console.log('刷牙咯');
+//     }
+    
+//     sleep(brush_teeth,dream,see);
+
+    ; (function () {
+        'use strict';
+
+        function buy(money,fail,success) {
+            if(money > 0) {
+                console.log('下单成功');
+                success();
+            } else {
+                console.log('下单失败');
+                fail();
+            }
+        }
+
+        
+        function on_game_order_success() {
+            console.log('游戏单，无需实体发货');
+        }
+
+        function on_music_order_success() {
+            console.log('歌曲已经发送到你的邮箱，请注意查收');
+            console.log('请注意查收');
+        }
+
+        function on_tshirt_order_success() {
+            console.log('服饰单');
+            console.log('通知仓库中...');
+            console.log('已通知仓库，发货中');
+        }
+
+        function on_order_fail() {
+            console.log('钱呢');
+        }
+
+        buy(100, on_order_fail,on_game_order_success );
+        buy(100, on_order_fail,on_music_order_success);
+        buy(100, on_order_fail,on_tshirt_order_success);
+
+    
+
+    })()
+
+
+</script>
