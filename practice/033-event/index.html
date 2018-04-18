@@ -1,0 +1,61 @@
+<!-- <a href="#">链接</a>
+<span>我叫span</span>
+<button>yo</button>
+<div class="a">我就是.a</div>
+<div class="a">我是#a</div>
+// var btn = document.querySelector('button');
+// var link = document.querySelector('a');
+// var  span= document.querySelector('span');
+// var div1 = document.querySelector('.a');
+// var div2 = document.querySelector('#a');
+
+// var div_list = document.querySelector('.a')
+<div id="a">我是.a他弟</div> -->
+
+<a href="http://baidu.com" class="trigger">Yo</a>
+<input type="search" class="search">
+
+
+<script>
+;(function() {
+    'use strict';
+
+
+    var trigger =document.querySelector('.trigger');
+    var search = document.querySelector('.search');
+
+    trigger.addEventListener('mouseenter',function () {
+        console.log('鼠标进入');
+    });
+
+    trigger.addEventListener('mouseleave',function () {
+        console.log('鼠标移出');
+    });
+
+    search.addEventListener('focus',function() {
+        console.log('已聚焦');
+    })
+    search.addEventListener('blur',function () {
+        console.log('已失焦');
+    })
+  
+ })()
+    // var user = {
+    //     name: 'whh',
+
+    //     say_hi: function() {
+    //         console.log('Yo');
+    //     }
+    // }
+    
+    // user.say_hi();
+    
+
+
+
+
+
+
+
+
+</script>
