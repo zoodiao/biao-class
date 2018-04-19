@@ -1,0 +1,24 @@
+<a class="trigger" href="http://baidu.com">Yo</a>
+<a class="trigger" href="http://baidu.com">Yo2</a>
+<a class="trigger" href="http://baidu.com">Yo3</a>
+
+<script>
+  ;(function () {
+    'use strict';
+
+    /*选中所有<button>元素*/
+    var trigger_list = document.querySelectorAll('.trigger');
+
+    /*迭代元素组*/
+    for (var i = 0; i < trigger_list.length; i++) {
+      var trigger = trigger_list[i];
+
+      /*给每个元素分别绑定事件*/
+      trigger.addEventListener('click', function (event) {
+        event.preventDefault();
+        console.log('Yo');
+      });
+    }
+
+  })();
+</script>

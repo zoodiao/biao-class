@@ -1,0 +1,214 @@
+<!--<script>-->
+<!--;(function () {-->
+<!--'use strict';-->
+
+<!--function make_meal(attach, eat_raw, pref) {-->
+<!--console.log('========');-->
+
+<!--console.log('买菜');-->
+<!--if (attach) {-->
+<!--attach();-->
+<!--}-->
+
+<!--console.log('洗菜');-->
+<!--if (eat_raw) {-->
+<!--eat_raw();-->
+<!--}-->
+
+<!--console.log('炒菜');-->
+<!--if (pref) {-->
+<!--pref();-->
+<!--}-->
+
+<!--}-->
+
+<!--function buy_pen() {-->
+<!--console.log('捎纸笔');-->
+<!--}-->
+
+<!--make_meal(-->
+<!--buy_pen,-->
+<!--function () {-->
+<!--console.log('给我个西红柿');-->
+<!--},-->
+<!--function () {-->
+<!--console.log('少放盐');-->
+<!--}-->
+<!--);-->
+<!--})();-->
+<!--</script>-->
+
+<!--买菜-->
+<!--<=-->
+<!--洗菜-->
+<!--<=-->
+<!--炒菜-->
+<!--<=-->
+
+<!--<script>-->
+<!--// var buy_pen = function () {-->
+<!--//   console.log('捎纸笔');-->
+<!--// }-->
+
+<!--function make_meal(attatch, a) {-->
+<!--console.log('========');-->
+
+<!--console.log('买菜');-->
+<!--if (attatch) {-->
+<!--attatch();-->
+<!--}-->
+
+<!--console.log('洗菜');-->
+<!--a();-->
+
+<!--console.log('炒菜');-->
+<!--}-->
+
+<!--function buy_pen() {-->
+<!--console.log('捎纸笔');-->
+<!--// 2-->
+<!--// 3-->
+<!--// 4-->
+<!--}-->
+
+
+<!--make_meal(buy_pen, function () {-->
+<!--// 1-->
+<!--// 2-->
+<!--// 3-->
+<!--});-->
+
+<!--</script>-->
+
+<!--<script>-->
+<!--var a = function () {-->
+<!--console.log(1);-->
+<!--}-->
+
+
+<!--// function a() {-->
+<!--//   console.log(1);-->
+<!--// }-->
+<!--</script>-->
+
+<!--<script>-->
+<!--/*睡觉-->
+<!--* @param Function before 睡觉前要做的事情-->
+<!--* */-->
+<!--function sleep(before) {-->
+
+<!--if (before)-->
+<!--before();-->
+
+<!--console.log('睡觉咯');-->
+<!--}-->
+
+<!--/*-->
+<!--* 刷牙-->
+<!--* */-->
+<!--function brush_teeth() {-->
+<!--console.log('牙牙乐');-->
+<!--}-->
+
+<!--sleep(brush_teeth);-->
+<!--</script>-->
+
+<!--<script>-->
+<!--/*购买-->
+<!--* @param Number money 付了多少钱-->
+<!--* @param Function success 当成功时执行的自定义代码-->
+<!--* @param Function fail 当失败时执行的自定义代码-->
+<!--* */-->
+<!--function buy(money, success, fail) {-->
+<!--if (money > 0) {-->
+<!--console.log('下单成功');-->
+<!--if (success)-->
+<!--success();-->
+<!--} else {-->
+<!--console.log('下单失败');-->
+<!--if (fail)-->
+<!--fail();-->
+<!--}-->
+<!--}-->
+
+<!--/*当购买游戏（虚拟产品之一）成功时执行的代码*/-->
+<!--function on_game_order_success() {-->
+<!--console.log('游戏单，无需实体发货');-->
+<!--}-->
+
+<!--/*当购买T恤（实体产品之一）成功时执行的代码*/-->
+<!--function on_tshirt_order_success() {-->
+<!--console.log('服饰单');-->
+<!--console.log('通知仓库中...')-->
+<!--console.log('已通知仓库，发货中...');-->
+<!--}-->
+
+<!--/*下单失败（未付款）时执行的代码*/-->
+<!--function on_order_fail() {-->
+<!--console.log('钱呢');-->
+<!--}-->
+
+<!--buy(100, on_game_order_success, on_order_fail);-->
+<!--buy(0, on_tshirt_order_success, on_order_fail);-->
+<!--</script>-->
+
+<script>
+  var product = {
+    price: 10,
+    type: 'Yo-100z'
+  }
+
+  function buy(money, success, fail) {
+    if (money > 0) {
+      console.log('支付成功短信发送中...');
+      success();
+    } else {
+      fail();
+    }
+  }
+
+  function on_game_order_success() {
+    console.log('激活码邮件发送中...');
+  }
+
+  function on_furniture_order_success(data) {
+    var msg = '正在生成通知短信：' +
+      '师傅你好，后天在南天门有个椅子要安装，家具型号[' +
+      data.type +
+      ']';
+
+    console.log(msg);
+    console.log('正在通知装配师傅...');
+  }
+
+  function on_tshirt_order_success() {
+    console.log('正在通知仓库发货...');
+  }
+
+  // buy(100, on_game_order_success);
+  buy(100, on_furniture_order_success);
+</script>
+
+<script>
+  function sleep(before) {
+    if (before)
+      before('yo');
+
+    console.log('睡觉咯');
+  }
+
+  function brush_teeth(brand) {
+    console.log('刷牙咯，我用的是' + brand + '牙膏');
+  }
+
+  sleep(brush_teeth);
+</script>
+
+<button style="margin: 100px">Yo</button>
+<script>
+  var btn = document.querySelector('button');
+  btn.addEventListener('click', function (event) {
+    console.log(event);
+    // console.log('yo')
+  })
+</script>

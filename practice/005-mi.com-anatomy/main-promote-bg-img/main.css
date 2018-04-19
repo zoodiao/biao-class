@@ -1,0 +1,27 @@
+.main-promote .cat {
+    width: 20%;
+    background: rgba(0, 0, 0, .6);
+}
+
+.main-promote {
+    background-color: #fae3b5; /*背景色*/
+    background-image: url(slider01.jpg); /*背景图*/
+    background-position: center; /*背景图定位*/
+    background-size: contain; /*背景图尺寸限制方式*/
+    background-repeat: no-repeat; /*不重复*/
+}
+
+.main-promote .cat a {
+    font-size: 75%;
+    display: block;
+    padding: 8px 20px;
+    color: #eee;
+}
+
+.main-promote .cat a:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+}
+
+
+

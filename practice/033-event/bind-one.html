@@ -1,0 +1,15 @@
+<a class="trigger" href="http://baidu.com">Yo</a>
+
+<script>
+  ;(function () {
+    'use strict';
+
+    var trigger = document.querySelector('.trigger'); // 选中第一个.trigger元素
+
+    trigger.addEventListener('click', function (event) {
+      event.preventDefault();
+      console.log('Yo');
+    });
+
+  })();
+</script>

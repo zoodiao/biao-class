@@ -1,0 +1,58 @@
+.nav.global {
+    background: #333;
+}
+
+.nav.global a {
+    color: #eee;
+}
+
+.nav.global .left {
+    float: left;
+}
+
+.nav.global .right {
+    float: right;
+}
+
+.search-area {
+    font-size: 0;
+}
+
+#search-input,
+#search-submit {
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#search-input {
+    width: 70%;
+}
+
+#search-submit {
+    width: 30%;
+}
+
+.nav.page a {
+    padding: 10px;
+    color: #555;
+}
+
+.main-promo {
+    background: #b10;
+}
+
+@media (max-width: 500px) {
+    #logo {
+        display: none;
+    }
+
+    .nav.page a {
+        display: block;
+    }
+
+    #qrcode {
+        display: none;
+    }
+}

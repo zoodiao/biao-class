@@ -1,0 +1,20 @@
+<button id="yo">Yo</button>
+
+<!--<script src="biao.js"></script>-->
+
+<script>
+  var el = document.querySelector('#yo');
+
+  var on_click = function () {
+    console.log(1);
+  }
+
+  /*绑定点击事件*/
+  el.addEventListener('click', on_click);
+  el.addEventListener('click', function () {
+    console.log(2);
+  });
+
+  /*移除点击事件*/
+  el.removeEventListener('click', on_click);
+</script>

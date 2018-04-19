@@ -1,0 +1,141 @@
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  input {
+    max-width: 100%;
+  }
+
+  .container {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row {
+    font-size: 0;
+  }
+
+  .col {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+  }
+
+  .col.left,
+  .col.right {
+    width: 50%;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  /*========================*/
+
+  .nav {
+    line-height: 1;
+  }
+
+  .nav .container {
+    position: relative;
+  }
+
+  .nav a {
+    padding: 5px;
+  }
+
+  .nav,
+  #menu-content {
+    background: #aaa;
+  }
+
+  #menu-content {
+    display: none;
+    font-size: 15px;
+    width: 240px;
+    position: absolute;
+    right: 0;
+    top: 24px;
+    text-align: center;
+  }
+
+  #menu-content a {
+    display: block;
+  }
+
+  #menu-content.show {
+    display: inline-block;
+  }
+</style>
+
+<div class="row nav">
+  <div class="container">
+    <div class="col left">
+      <a href="#">Item</a>
+      <a href="#">Item</a>
+      <a href="#">Item</a>
+      <a href="#">Item</a>
+      <a href="#">Item</a>
+    </div>
+    <div class="col right">
+      <a href="#">Item</a>
+      <a id="menu-trigger" href="#">MENU</a>
+    </div>
+    <div id="menu-content">
+      <h3>登录</h3>
+      <input type="text"><br>
+      <input type="text"><br>
+      <button>登录</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  var menu_trigger = document.querySelector('#menu-trigger')
+    , menu_content = document.querySelector('#menu-content')
+  ;
+
+  function visible() {
+    return menu_content.classList.contains('show');
+  }
+
+  function show() {
+    menu_content.classList.add('show');
+  }
+
+  function hide() {
+    menu_content.classList.remove('show');
+  }
+
+  menu_trigger.addEventListener('click', function () {
+    visible() ? hide() : show();
+  });
+  /*在祖宗辈检测点击事件（这意味着哪怕是孙子引发的点击事件也会传递上来，因为默认冒泡）*/
+  document.addEventListener('click', function (e) {
+    /*取到事件源，就是最先冒泡的那个元素*/
+    var el = e.target;
+    /*
+    看一下点击源是不是在表单里头(看一下这个元素有没有一个叫#menu-content的先人)
+    如果有，就返回它先人，没有就是null
+    */
+    var menu = el.closest('#menu-content');
+    /*
+    1. 如果有，就说明用户是点击在表单里边，所以就不应该隐藏，否则（点击除了表单之外的所有元素）就应该隐藏。
+    2. 如果这个元素是表单开关，则应该忽略，否则表单将永远无法显示。
+    */
+    if (!menu && el !== menu_trigger)
+      hide();
+  });
+</script>

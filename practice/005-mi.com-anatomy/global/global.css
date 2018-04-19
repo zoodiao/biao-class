@@ -1,0 +1,44 @@
+/*=========全局样式开始==========*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; /*清除链接的下划线*/
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: #eee;
+    color: #555;
+    margin: 0;
+    font-family: sans-serif, 'Microsoft YaHei'; /*字体族*/
+}
+
+.container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    font-size: 0;
+    display: block;
+}
+
+.col {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+}
+
+.col.right {
+    text-align: right;
+}
+
+/*=========全局样式结束==========*/

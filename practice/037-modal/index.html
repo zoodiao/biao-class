@@ -1,0 +1,88 @@
+<style>
+  body {
+    /*margin: 0;*/
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .mask,
+  .modal {
+    display: none;
+    position: fixed;
+  }
+
+  .mask {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+  }
+
+  .modal {
+    top: 100px;
+    bottom: 100px;
+    left: 100px;
+    right: 100px;
+
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ccc;
+  }
+
+  .modal .toolbar {
+    float: right;
+  }
+
+  .show {
+    display: block;
+  }
+</style>
+
+<div>
+  <nav>
+    <button class="login">登录</button>
+  </nav>
+  <div class="mask"></div>
+  <div class="modal">
+    <div class="toolbar">
+      <button class="close">关闭</button>
+    </div>
+    <h3>登录</h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque fugiat laboriosam possimus quam, repudiandae
+    similique vel! Consequatur, dignissimos, dolor magni neque nulla odit porro praesentium, recusandae reprehenderit
+    similique tempore unde.
+  </div>
+</div>
+
+
+<script>
+  var login = document.querySelector('.login'); // 谁触发显示
+  var close = document.querySelector('.close'); // 谁触发隐藏
+  var mask = document.querySelector('.mask'); // 谁显示
+  var modal = document.querySelector('.modal'); // 谁显示
+
+  function show() {
+    mask.classList.add('show');
+    modal.classList.add('show');
+  }
+
+  function hide() {
+    modal.classList.remove('show');
+    mask.classList.remove('show');
+  }
+
+  login.addEventListener('click', show);
+  close.addEventListener('click', hide);
+  mask.addEventListener('click', hide);
+
+  document.addEventListener('keyup', function (e) {
+    if (e.code !== 'Escape')
+      return;
+    hide();
+  })
+</script>

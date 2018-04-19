@@ -1,0 +1,124 @@
+h1 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 280%;
+}
+
+.col, .row {
+    /*background: rgba(0, 0, 0, .1);*/
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav .left {
+    width: 40%;
+}
+
+.nav .right {
+    width: 60%;
+}
+
+.nav .auth {
+    font-size: 70%;
+}
+
+.search-area [type="submit"],
+.first-screen,
+.first-screen a {
+    color: #eee;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 80%;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.nav .logo,
+.nav .location {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav .logo {
+    width: 90px;
+    height: 45px;
+    background-image: url(../img/sprite.png);
+    background-position: -10px -12px;
+}
+
+.nav .location {
+    padding: 5px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, .1);
+    font-size: 65%;
+    cursor: pointer;
+}
+
+.first-screen {
+    background-image: url(../img/banner.jpg);
+    -webkit-background-size: 150%;
+    background-size: 150%;
+    background-position: center top;
+}
+
+.first-screen .center {
+    max-width: 450px;
+    margin: 0 auto 140px auto;
+}
+
+.first-screen .center .title {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.first-screen .terms {
+    font-size: 55%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.first-screen .terms > * {
+    display: inline-block;
+    padding: 5px;
+}
+
+.search-area .type {
+    text-align: left;
+    font-size: 80%;
+}
+
+.search-area .type span {
+    display: inline-block;
+    padding: 8px;
+}
+
+.search-area .type span.active {
+    color: #fff;
+}
+
+.search-area [type="search"],
+.search-area [type="submit"] {
+    display: inline-block;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 10px;
+    font-size: .8rem;
+}
+
+.search-area [type="search"] {
+    width: 80%;
+}
+
+.search-area [type="submit"] {
+    width: 20%;
+    border-left: 0;
+    background: #00ae66;
+}
+

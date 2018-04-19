@@ -1,0 +1,31 @@
+table, td, th {
+    border: 1px solid gray;
+}
+
+/*p {*/
+/*background: gray;*/
+/*}*/
+
+/*.yellow {*/
+/*background: yellow;*/
+/*}*/
+
+/*#logo {*/
+/*border: 2px solid black;*/
+/*}*/
+
+div a {
+    background: purple;
+}
+
+span a {
+
+}
+
+div > a {
+    color: white;
+}
+
+div > * {
+    border: 2px solid tomato;
+}

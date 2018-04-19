@@ -1,0 +1,70 @@
+<meta charset="utf-8">
+<script>
+  var 连 = [
+    [ // 1排
+      [1, 11, 111], // 1班
+      [2, 22, 222], // 2班
+      [3, 33, 333], // 3班
+      [4, 44, 444], // 4班
+    ],
+    [ // 2排
+      [1, 11, 111], // 1班
+      [2, 22, 222], // 2班
+      [3, 33, 333], // 3班
+      [4, 44, 444], // 4班
+    ],
+  ];
+
+  for_i: for (var i = 0; i < 连.length; i++) {
+    /*拿到当前迭代的第一级的元素（也就是二级数组）*/
+    var list_i = 连[i];
+
+    /*进入二级数组*/
+    for_j: for (var j = 0; j < list_i.length; j++) {
+      /*拿到数组中的元素（也就是数字）*/
+      var list_j = list_i[j];
+
+      for_k: for (var k = 0; k < list_j.length; k++) {
+        var num = list_j[k];
+        if (num == 3) {
+          console.log('没必要检查下去了，我们中出了一个叛徒')
+          break for_j;
+        }
+        console.log(num);
+      }
+    }
+  }
+
+  console.log([1, 2, 3])
+  // var num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // for (var i = 0; i < num_list.length; i++) {
+  //   var num = num_list[i];
+  //   console.log(num);
+  //   if (num == 3) {
+  //     console.log('坏人');
+  //     break;
+  //   }
+  // }
+  //
+  // console.log('放款失败');
+
+  // ....
+
+  // for (var i = 0; i < num_list.length; i++) {
+  //   var num = num_list[i];
+  //   /*===================*/
+  //   if (num <= 4) {
+  //     continue;
+  //   }
+  //   /*===================*/
+  //   if (num >= 9) {
+  //     continue;
+  //   }
+  //   /*===================*/
+  //   console.log(num);
+  // }
+  //
+  // for ()
+
+  // var a = ['a', 'b', 'c']
+</script>

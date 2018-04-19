@@ -1,0 +1,139 @@
+<!--<script>-->
+<!--var arr = ['y', 'o', 'o', 'o'];-->
+<!--var sum = '';-->
+<!--var i;-->
+<!--for(i = 0; i < arr.length; i++) {-->
+<!--var num = arr[i];-->
+<!--sum = sum + num;-->
+<!--}-->
+
+<!--console.log(sum);-->
+<!--</script>-->
+
+<!--<script>-->
+<!--var arr = [1, 3, 2, 7, 6];-->
+<!--var arr_even = [];-->
+
+<!--for(var i = 0; i < arr.length; i++) {-->
+<!--var num = arr[i];-->
+
+<!--if(num % 2 == 0) {-->
+<!--arr_even.push(num);-->
+<!--}-->
+<!--}-->
+
+<!--console.log(arr_even);-->
+<!--</script>-->
+
+<!--<script>-->
+<!--var arr = [];-->
+
+<!--for (var i = 0; i < 5; i++) {-->
+<!--arr.push(i + 1);-->
+<!--}-->
+
+<!--console.log(arr);-->
+<!--</script>-->
+
+
+<!--<script>-->
+  <!--var arr = [-->
+    <!--'a1',-->
+    <!--'a2',-->
+    <!--['b1', 'b2', ['c1', 'c2', 'c3'], 'b3'],-->
+    <!--'a3'-->
+  <!--];-->
+
+  <!--var tmp;-->
+
+  <!--for (var i = 0; i < arr.length; i++) {-->
+    <!--var l1 = arr[i];-->
+    <!--if (typeof l1 == 'string') {-->
+      <!--console.log(l1);-->
+    <!--} else {-->
+      <!--tmp = l1;-->
+    <!--}-->
+  <!--}-->
+
+  <!--var tmp2;-->
+
+  <!--for(var i = 0; i < tmp.length; i++) {-->
+    <!--var l1 = tmp[i];-->
+
+    <!--if (typeof l1 == 'string') {-->
+      <!--console.log(l1);-->
+    <!--} else {-->
+      <!--tmp2 = l1;-->
+    <!--}-->
+  <!--}-->
+
+  <!--for(var i = 0; i < tmp2.length; i++) {-->
+    <!--var l1 = tmp2[i];-->
+    <!--if (typeof l1 == 'string') {-->
+      <!--console.log(l1);-->
+    <!--} else {-->
+      <!--tmp2 = l1;-->
+    <!--}-->
+  <!--}-->
+<!--</script>-->
+
+<script>
+  var list = [
+    {
+      name: '王花花',
+      salary: 100,
+    },
+    {
+      name: '李拴蛋',
+      salary: 200,
+    },
+    {
+      name: '牛备备',
+      salary: 300,
+    },
+  ];
+
+  var rich = [];
+
+  for(var i = 0; i < list.length; i++) {
+    var item = list[i];
+
+    if(item.salary <= 100)
+      continue;
+
+    rich.push(item);
+
+    // if(item.salary > 100) {
+    //   rich.push(item);
+    // }
+  }
+
+  console.log(rich);
+</script>
+
+<script>
+  var list = [
+    {
+      name: '王花花',
+    },
+    {
+      name: '李拴蛋',
+    },
+    {
+      name: '牛备备',
+    },
+  ];
+
+  var result = [];
+
+  for(var i = 0; i < list.length; i++) {
+    var item = list[i];
+
+    if(!item.name.startsWith('王'))
+      continue;
+
+    result.push(item);
+  }
+
+  console.log(result);
+</script>
