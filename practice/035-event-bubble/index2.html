@@ -17,15 +17,16 @@
     var box3 = document.querySelector('#box3');
 
     box1.addEventListener('click', function (e) {
+         console.log(e.target);
         // console.log(1);
     });
     box2.addEventListener('click', function (e) {
-        console.log(e.target);
+         console.log(e.target);
         // e.stopPropagation();
         // console.log(2);
     });
     box3.addEventListener('click', function (e) {
-        console.log(e.currentTarget);
+        // console.log(e.currentTarget);
         console.log(e.target);
         // console.log();
         // console.log(3);

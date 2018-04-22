@@ -1,0 +1,69 @@
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+    }
+
+    .tip-trigger {
+        background: pink;
+    }
+
+    .tip {
+        position: fixed;
+        background: #222;
+        color: #fff;
+        padding: 5px;
+        /*-webkit-border-radius: 3px;*/
+        /*-moz-border-radius: 3px;*/
+        /*border-radius: 3px;*/
+        -webkit-box-shadow: 0 0 2px #000;
+        -moz-box-shadow: 0 0 2px #000;
+        box-shadow: 0 0 2px #000;
+        opacity: .8;
+    }
+</style>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates eligendi fuga illo amet fugiat porro. Necessitatibus, in dignissimos facilis nulla iusto quos dolor repellendus perspiciatis quidem labore eaque magni ex?
+<span data-tip="Yoooooo" class="tip-trigger">Yo</span>
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex distinctio deleniti vel ad. Voluptatibus quibusdam fuga nulla distinctio sapiente illum beatae? Tempora eaque in dolore recusandae dolores optio quos minus.
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex distinctio deleniti vel ad. Voluptatibus quibusdam fuga nulla distinctio sapiente illum beatae? Tempora eaque in dolore recusandae dolores optio quos minus.
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex distinctio deleniti vel ad. Voluptatibus quibusdam fuga nulla distinctio sapiente illum beatae? Tempora eaque in dolore recusandae dolores optio quos minus.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis
+
+<script>
+    var tip_trigger = document.querySelector('.tip-trigger');
+    var tip;
+
+    function show_tip() {
+        if (tip)
+            return;
+
+        tip = document.createElement('div');
+        tip.classList.add('tip');
+        tip.innerText = tip_trigger.dataset.tip;
+        document.body.appendChild(tip);
+    }
+
+    function hide_tip() {
+        tip.remove();
+        tip = null;
+    }
+
+    function position_tip() {
+        var position = tip_trigger.getBoundingClientRect();
+        tip.style.top = position.top - tip.offsetHeight - 2;
+        tip.style.left = position.left;
+    }
+
+    tip_trigger.addEventListener('mouseenter', function () {
+        show_tip();
+        position_tip();
+    });
+
+    tip_trigger.addEventListener('mouseleave', function () {
+        hide_tip();
+    });
+
+</script>
