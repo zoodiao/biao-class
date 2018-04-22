@@ -23,14 +23,10 @@
     }
 </style>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates eligendi fuga illo amet fugiat porro. Necessitatibus, in dignissimos facilis nulla iusto quos dolor repellendus perspiciatis quidem labore eaque magni ex?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dignissimos eum facilis Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates eligendi fuga illo amet fugiat porro. Necessitatibus, in dignissimos facilis nulla iusto quos dolor repellendus perspiciatis quidem labore eaque magni ex?
 <span data-tip="Yoooooo" class="tip-trigger">Yo</span>
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex distinctio deleniti vel ad. Voluptatibus quibusdam fuga nulla distinctio sapiente illum beatae? Tempora eaque in dolore recusandae dolores optio quos minus.
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex distinctio deleniti vel ad. Voluptatibus quibusdam fuga nulla distinctio sapiente illum beatae? Tempora eaque in dolore recusandae dolores optio quos minus.
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex distinctio deleniti vel ad. Voluptatibus quibusdam fuga nulla distinctio sapiente illum beatae? Tempora eaque in dolore recusandae dolores optio quos minus.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex distinctio deleniti vel ad. Voluptatibus quibusdam fuga nulla distinctio sapiente illum beatae? Tempora eaque in dolore recusandae dolores optio quos minus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex distinctio deleniti vel ad. Voluptatibus quibusdam fuga nulla distinctio sapiente illum beatae? Tempora eaque in dolore recusandae dolores optio quos minus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex distinctio deleniti vel ad. Voluptatibus quibusdam fuga nulla distinctio sapiente illum beatae? Tempora eaque in dolore recusandae dolores optio quos minus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis
 
 <script>
     var tip_trigger = document.querySelector('.tip-trigger');
@@ -54,16 +50,33 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis
     function position_tip() {
         var position = tip_trigger.getBoundingClientRect();
         tip.style.top = position.top - tip.offsetHeight - 2;
-        tip.style.left = position.left;
+        tip.style.left = position.left - 30;
     }
 
     tip_trigger.addEventListener('mouseenter', function () {
         show_tip();
         position_tip();
+        fixed();
+        change() ;
+
     });
 
     tip_trigger.addEventListener('mouseleave', function () {
         hide_tip();
     });
 
+    function fixed() {
+        if (tip_trigger.style.top > 0)
+            return;
+        tip_trigger.style.position === 'fixed';
+    }
+
+    function change() {
+        if(tip_trigger.style.position !== 'fixed')
+        return;
+        
+        var position = tip_trigger.getBoundingClientRect();
+        tip.style.top = position.top - tip.offsetHeight + 60;
+        tip.style.left = position.left;
+    }
 </script>
