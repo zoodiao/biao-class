@@ -1,0 +1,56 @@
+<!-- <script>
+
+    
+    var timer = setTimeout(function() {
+        console.log('hello world');
+    }, 3000);
+    // clearTimeout(timer);
+
+    var count = 0;
+    var timer =setInterval(function() {
+        console.log(count);
+        count++;
+
+        if(count > 10) {
+            clearInterval(timer);
+        }
+    },3000)
+</script> -->
+
+<!-- <button id="x">YO</button>
+<script>
+
+    function on_click() {
+
+        timer();
+        //  x.removeEventListener('click',on_click);
+    }
+    
+    x.addEventListener('click', on_click);
+    
+    
+    function timer() {
+    } setTimeout(function () {
+        console.log('Yo');
+    }, 3000);
+
+</script> -->
+
+<script>
+
+    fetch('https://api.github.com/users/biaoyansu')
+    .then(function(res) {
+        res.json()
+        .then(function(d) {
+            console.log(d);
+        });
+    });
+var http = new XMLHttpRequest();
+http.open('get','https://www.bilibili.com/widget/getSearchDefaultWords');
+http.send();
+
+http.addEventListener('load',function() {
+    var obj = JSON.parse(this.responseText);
+    console.log(obj);
+});
+</script>

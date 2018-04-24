@@ -1,0 +1,24 @@
+<div id="user"></div>
+
+<script>
+    var username = 'zoodiao';
+    var http =new XMLHttpRequest();
+    http.open('get','https://api.github.com/users/' + username);
+    http.send();
+
+    http.addEventListener('load',function() {
+        var text =this.responseText;
+        var data = JSON.parse(text);
+        console.log(data);
+    })
+    
+
+//     function render_user() {
+//     var html =
+//       ` id: ${user} <br>
+//      头像：<img src="${user}">
+//     `
+//     user.innerHTML = html;
+//   }
+
+</script>
