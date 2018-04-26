@@ -1,0 +1,37 @@
+
+
+<script>
+    var bus = 0;
+    var milke = 0;
+    function buy(by_bus,no_bus,milk,no_milk) {
+        console.log('出门');
+        by_bus();
+        if(!bus){
+        console.log('没有车');
+        no_bus();
+        }
+        console.log('坐车');
+        console.log('进超市');
+        milk();
+        if (!milke) {
+            console.log('卖完了');
+            no_milk();
+        }
+        console.log('出超市');
+
+    }
+buy(function() {
+console.log('坐200号巴士');
+}
+,function() {
+    console.log('打滴滴');
+}
+,function() {
+    console.log('买蒙牛牌酸奶')
+}
+,function() {
+    console.log('买可乐');
+}
+);
+
+</script>

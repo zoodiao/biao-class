@@ -1,0 +1,33 @@
+<div id="user-list"></div>
+
+<script>
+    var el_user_list = document.getElementById('user-list');
+    var user_list = [
+        {
+            name:'王花花',
+            age : 28
+        }
+        ,{
+            name:'李拴蛋',
+            age: 21
+        },
+        {   
+            name:'赵可爽',
+            age: 23
+        },
+    ];
+
+    init();
+
+    function render( ) {
+        var html = '';
+
+        user_list.forEach(function(user) {
+            html = html + `<div>姓名: ${user.name},年龄:${user.age}</div>`;
+        });
+        el_user_list.innerHTML = html;
+    }
+    function init() {
+        render();
+    }
+</script>

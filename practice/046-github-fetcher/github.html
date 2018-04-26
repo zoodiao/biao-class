@@ -1,0 +1,45 @@
+<form id="search-form">
+        <input type="search" id="search-input" value="biaoyansu">
+        <button type="submit">Yo</button>
+      </form>
+      
+      <div id="user-info"></div>
+      
+      <script>
+        var user
+          , el_form = document.getElementById('search-form')
+          , el_input = document.getElementById('search-input')
+          , el_user_info = document.getElementById('user-info')
+        ;
+        init();
+        function init() {
+          /*帮事件*/
+          el_form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var username = el_input.value;
+            find_user(username);
+          });
+        }
+        function find_user(username) {
+          send('https://api.github.com/users/' + username, function (data) {
+            user = data;
+            render();
+          });
+        }
+        function send(url, onload, method) {
+          method = method || 'get';
+          var http = new XMLHttpRequest();
+          http.open(method, url);
+          http.send();
+          http.addEventListener('load', function () {
+            var data = JSON.parse(http.responseText);
+            onload(data);
+          })
+        }
+        function render() {
+          el_user_info.innerHTML = `
+          <h1>${user.login}</h1>
+          <p>${user.bio}</p>
+          `;
+        }
+      </script>
