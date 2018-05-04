@@ -54,7 +54,7 @@
     <li>雪梨</li>
     <li>菠萝</li>
 </ul> -->
-<table border="1">
+<!-- <table border="1">
     <thead>
         <tr>
             <th>姓名</th>
@@ -79,4 +79,62 @@
             <td>男</td>
         </tr>
     </tbody>
-</table>
+</table> -->
+
+
+<!-- <div id="x">
+    <span>item</span>
+    <span>item</span>
+    <span>item</span>
+    <span>item</span>
+</div>
+
+
+
+<script>
+    var html =`
+    <span>item2</span>
+    <span>item2</span>
+    <span>item2</span>
+    <span>item2</span>
+    `;
+    var page = document.createElement('div');
+    
+    x.insertAdjacentHTML('beforeend',html);
+ 
+</script> -->
+
+
+<div id="pagination"></div>
+
+<script>
+    var page_amount = 100
+    ,max_btn_length = 5
+    ,current_page = 1;
+
+    render();
+
+    function render() {
+        var el_pagination = document.getElementById('pagination')
+        ,start
+        ,end
+        ,middle = Math.ceil(max_btn_length/2)
+        ;
+        
+        var reaching_left = current_page <= middle
+
+        if (reaching_left){
+            start = 1;
+            end = max_btn_length;
+        }
+
+        for (var i = start; i <= end; i++) {
+            var btn = document.createElement('button');
+            btn.innerText = i;
+            if(i == current_page)
+            btn.style.background = 'blue';
+            el_pagination.appendChild(btn);
+        }
+    }
+
+</script>

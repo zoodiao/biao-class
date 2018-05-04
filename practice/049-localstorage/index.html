@@ -1,0 +1,13 @@
+<script>
+    var data = ['whh','lsd','zks'];
+    var json = JSON.stringify(data);
+    localStorage.setItem('history_list',json);
+
+</script>
+
+<script>
+    var json = localStorage.getItem('history_list');
+    data = JSON.parse(json);
+    console.log(data);
+
+</script>

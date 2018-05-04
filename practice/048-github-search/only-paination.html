@@ -1,0 +1,19 @@
+<div id="pagintion"></div>
+
+<script>
+
+    render();
+
+    function render() {
+        var el_pagination = document.getElementById('pagintion')
+        ,start = 1
+        ,end = 10;
+
+        for (var i = start; i <= end;i++) {
+            var btn = document.createElement('button');
+            btn.innerText = i;
+            el_pagination.appendChild(btn);
+        }
+
+    }
+</script>
