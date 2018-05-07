@@ -1,7 +1,8 @@
-var event_manager = require('./event_manager');
+var event = require('./event');
 
 init();
-
+//初始化
 function init() {
-    event_manager.add_events();
+    // 绑定事件
+    event.add_events();
 }
