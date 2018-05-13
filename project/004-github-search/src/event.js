@@ -1,4 +1,9 @@
-function bind_events() {
+var el = require('./element')
+,   history = require('./history')
+,   search = require('./search')
+;
+
+function bind_all() {
     detect_submit();
     detect_click_top();
     detect_click_pagination();
@@ -8,17 +13,12 @@ function bind_events() {
     //@1 detect_click_history_list();
 }
 
-/*通过用户名搜Github用户
-* @param String keyword 关键词
-* */
-
-/*绑定表单提交事件*/
 function detect_submit() {
-    el_form.addEventListener('submit', function (e) {
+    el.form.addEventListener('submit', function (e) {
         e.preventDefault();
 
         /*获取输入的关键词*/
-        keyword = el_input.value;
+        keyword = el.input.value;
 
         if (!keyword) {
             alert('你闹呢');
@@ -26,33 +26,39 @@ function detect_submit() {
         }
 
         /*重置页码*/
-        reset_page();
+        search.reset_page();
 
         /*重置用户列表HTML*/
-        reset_user_list();
+        search.reset_user_list();
 
         /*隐藏两个只有得到结果才有意义的组件*/
-        el_placeholer.hidden = true;
+        el.placeholer.hidden = true;
 
-        search(keyword);
+        search.search(keyword);
 
-        clear_pagination();
-        hide_pagination();
+        search.clear_pagination();
+        search.hide_pagination();
+    });
+}
+
+function detect_click_top() {
+    el.top.addEventListener('click', function () {
+        window.scrollTo(0, 0);
     });
 }
 
 function detect_click_pagination() {
-    el_pagination_start.addEventListener('click', function () {
+    el.pagination_start.addEventListener('click', function () {
         goto_page(1);
     });
-    el_pagination_end.addEventListener('click', function () {
+    el.pagination_end.addEventListener('click', function () {
         goto_page(page_amount);
     });
 }
 
 function detect_click_input() {
-    el_input.addEventListener('click', function () {
-        show_history_list();
+    el.input.addEventListener('click', function () {
+        history.show_list();
     });
 }
 
@@ -72,6 +78,16 @@ function detect_click_document() {
             if (in_search_input || in_history_list)
                 return;
 
-            hide_history_list();
+                history.hide_list();
         });
+}
+
+function detect_blur_input() {
+    el.input.addEventListener('blur', function () {
+
+    });
+}
+
+module.exports = {
+    bind_all: bind_all,
 }
