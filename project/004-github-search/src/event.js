@@ -69,8 +69,6 @@ function detect_click_document() {
         .addEventListener('click', function (e) {
             var target = e.target;
 
-            console.log(target);
-
             var in_search_input = target.closest('#search-input')
                 , in_history_list = target.closest('#history-list')
                 ;

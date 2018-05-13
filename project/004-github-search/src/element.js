@@ -7,6 +7,7 @@ var output = {
     pagination_end: document.getElementById('pagination-end'),
     user_list: document.getElementById('user-list'),
     pagination: document.getElementById('pagination'),
+    pagination_container: document.getElementById('pagination-container'),
 };
 
 module.exports = output;

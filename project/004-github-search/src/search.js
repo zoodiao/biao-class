@@ -1,6 +1,9 @@
 var el = require('./element')
 ,   share = require('./share')
 ,   history = require('./history')
+,   no_more
+,   page_amount
+,   max_page_btn = 5
 ;
 
 function goto_page(page) {
@@ -62,7 +65,7 @@ function render() {
     .innerHTML = `共有${res.total_count}条结果`;
 
   /*如果每页的数量乘以页数大于总数就说明当前页就是最后一页*/
-  no_more = current_page * limit >= amount;
+  no_more = share.get_current_page() * share.get_limit() >= share.get_amount();
 
   /*
   .hidden = no_more;
@@ -192,7 +195,7 @@ function make_function_on_page_change(num) {
 /*获取页面总数*/
 function get_page_amount() {
   /*总人数除以每页的数量*/
-  page_amount = Math.ceil(amount / limit);
+  page_amount = Math.ceil(share.get_amount() / share.get_limit());
 }
 
 function search() {

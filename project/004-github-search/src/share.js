@@ -1,6 +1,7 @@
 var keyword
 ,   limit
 ,   current_page
+,   amount
 ;
 
 function get_keyword() {
@@ -30,6 +31,15 @@ function set_current_page(val) {
     return current_page;
 }
 
+function get_amount() {
+    return amount;
+}
+
+function set_amount(val) {
+    amount = val;
+    return amount;
+}
+
 module.exports = {
     get_keyword: get_keyword,
     set_keyword: set_keyword,
@@ -37,4 +47,6 @@ module.exports = {
     set_limit: set_limit,
     get_current_page: get_current_page,
     set_current_page: set_current_page,
+    get_amount: get_amount,
+    set_amount: set_amount,
 }
