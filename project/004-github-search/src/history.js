@@ -1,7 +1,9 @@
-var store =require('./store')
-,el_list = document.getElementById('history-list')
-,util = require('./util')
-;
+var store = require('./store')
+    , el_list = document.getElementById('history-list')
+    , util = require('./util')
+    , search = require('./search')
+    , share = require('./share')
+    ;
 
 
 var list;
@@ -38,36 +40,36 @@ function render_list() {
                 return;
 
             /*上屏*/
-            set_keyword(this.dataset.history);
+            share.set_keyword(this.dataset.history);
             /*搜搜*/
-            search();
+            search.search();
         });
 
         /*当删除按钮点击时*/
-        el_delete.addEventListener('click', function () {
-            /*先找到叫.history的先人，因为它那里存着对应的关键词*/
-            var el_history = this.closest('.history')
-                , kwd = el_history.dataset.history;
-
-            /*如果删除失败，直接返回*/
-            if (!util.find_and_delete(list, kwd))
-                return;
-
-            /*否则用新数据覆盖冰箱里的数据*/
-            overwrite_list(list);
-            /*重新渲染历史记录*/
-            setTimeout(function () {
-                render_list();
-            }, 100);
-
-            /*如果没有历史记录了就隐藏整个记录列表*/
-            if (!list.length) {
-                el_list.hidden = true;
-            }
-        });
+        el_delete.addEventListener('click', on_delete_clicked);
     });
 }
+/*先找到叫.history的先人，因为它那里存着对应的关键词*/
+function on_delete_clicked() {
+    var el_history = this.closest('.history')
+        , kwd = el_history.dataset.history;
 
+    /*如果删除失败，直接返回*/
+    if (!util.find_and_delete(list, kwd))
+        return;
+
+    /*否则用新数据覆盖冰箱里的数据*/
+    overwrite_list(list);
+    /*重新渲染历史记录*/
+    setTimeout(function () {
+        render_list();
+    }, 100);
+
+    /*如果没有历史记录了就隐藏整个记录列表*/
+    if (!list.length) {
+        el_list.hidden = true;
+    }
+}
 function show_list() {
     if (!list.length)
         return;

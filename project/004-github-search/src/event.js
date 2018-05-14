@@ -1,6 +1,7 @@
 var el = require('./element')
 ,   history = require('./history')
 ,   search = require('./search')
+,   share = require('./share')
 ;
 
 function bind_all() {
@@ -18,7 +19,7 @@ function detect_submit() {
         e.preventDefault();
 
         /*获取输入的关键词*/
-        keyword = el.input.value;
+        var keyword = share.set_keyword(el.input.value);
 
         if (!keyword) {
             alert('你闹呢');

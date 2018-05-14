@@ -1,11 +1,11 @@
 var el = require('./element')
-,   share = require('./share')
-,   history = require('./history')
-,   no_more
-,   page_amount
-,   max_page_btn = 5
-;
-
+  , share = require('./share')
+  // , history = require('./history')
+  , no_more
+  , page_amount
+  , max_page_btn = 5
+  , res
+  ;
 function goto_page(page) {
 
   var max_user_limit_reached = page * limit > MAX_LIMIT;
@@ -102,6 +102,7 @@ function render_pagination() {
   var start
     , end
     , middle = Math.ceil(max_page_btn / 2)
+    ,current_page = share.get_current_page()
     , reaching_left = current_page <= middle
     , reaching_right = current_page >= page_amount - middle;
   ;
@@ -177,7 +178,7 @@ function render_pagination() {
 
 function set_keyword(kwd) {
   el.input.value = kwd;
-  keyword = kwd;
+  share.set_keyword(kwd);
 }
 
 /*往冰箱存*/
@@ -214,13 +215,15 @@ function search() {
     res = JSON.parse(http.responseText);
 
     /*拿到搜索结果总数*/
-    amount = res.total_count;
+    share.set_amount(res.total_count);
     /*既然有了数据，不就可以渲染用户列表和页码组件了吗？*/
     render();
     render_pagination();
   });
 
-  history.append(keyword);
+
+  var history = require('./history');
+  history.append(share.get_keyword());
 }
 
 module.exports = {
@@ -229,5 +232,4 @@ module.exports = {
   clear_pagination: clear_pagination,
   hide_pagination: hide_pagination,
   search: search,
-  
 }
