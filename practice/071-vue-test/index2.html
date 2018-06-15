@@ -1,0 +1,32 @@
+<div id="root">
+    <input type="text" @foucs ="on =true" @blur = "on = false">
+    <div v-if="on">
+        卤肉饭卡上的空间放大看上了飞机
+    </div>
+</div>>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#root',
+        data: {
+            on: false,
+        },
+    });
+</script>
+<!--<h1 v-if="show">Yo</h1>-->
+<!-- <input type="text" @focus="on = true" @blur="on = false">
+    <div v-if="on">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem cum cumque, delectus ducimus eius eos ex
+      excepturi id iste odio quis sed sequi soluta tempore temporibus voluptate? Dolorum, vitae?
+    </div>
+  </div>
+  
+  <script src="./node_modules/vue/dist/vue.js"></script>
+  <script>
+    window.root = new Vue({
+      el   : '#root',
+      data : {
+        on : false,
+      },
+    });
+  </script> -->

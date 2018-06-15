@@ -1,4 +1,4 @@
-new Vue({
+window.root = new Vue({
     el: '#root',
     data: {
         current: null,
@@ -10,6 +10,11 @@ new Vue({
             this.memo_list.push(this.current);
         },
 
+        remove(index) {
+            // console.log('index:',index);
+            this.memo_list.splice(index, 1);
+        },
+
         sync_to(memo_list) {
             localStorage.setItem('memo_list', JSON.stringify(memo_list));
         },
@@ -17,15 +22,15 @@ new Vue({
             this.memo_list = JSON.parse(localStorage.getItem('memo_list')) ||
                 [
                     {
-                        title: 'Title A',
+                        title: 'title A',
                         content: 'aaaa',
                     },
                     {
-                        title: 'TitleB',
+                        title: 'title B',
                         content: 'bbbb',
                     },
                     {
-                        title: 'Title C',
+                        title: 'title C',
                         content: 'cccc',
                     },
                 ];
@@ -33,8 +38,8 @@ new Vue({
     },
     watch: {
         memo_list: {
-            deep : true,
-            handler: function(n){
+            deep: true,
+            handler: function (n) {
                 this.sync_to(n);
             },
         },
