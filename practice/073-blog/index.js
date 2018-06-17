@@ -1,92 +1,30 @@
-const Home = Vue.component('home', {
-    template:
-        `<div>
-    <h1>我的文章</h1>
-    <router-link v-for="row in article_list"
-    :key="row.id"
-    :to="'rticle/' + row.id" >{{title}} <br> </router-link>
-    </div>`,
-
-    data() {
-        return {
-            article_list: [],
-        };
-    },
-    method: {
-        read() {
-            http
-                .post('article/read', { only: ['title', 'id'] })
-                .then(res => {
-                    this.article_list = res.data.data;
-                });
-        },
-    },
-    mounted() {
-        this.read();
-    },
+let Home = Vue.component('home', {
+    template: `<div> <h1>Home</h1> </div>`,
+    data: function () {
+        return {};
+    }
 });
 
-const ArticleDetail = Vue.component('article-detail', {
-    template: ` 
-    <div>
-        <h1>{{current.title}} </h1>
-        <div>{{current.author}}</div>
-        <div>{{current.content}}</div>
-    </div>`
-    ,
-    data() {
-        return {
-            current: {},
-        };
-    },
-    mounted() {
-        http.post('article/find', { id: this.$route.params.id })
-            .then(res => {
-                this.current = res.data.data;
-            });
-    },
-});
-
-const ArticleNew = Vue.component('article-new', {
-    template: `
-    <div>
-    <h1>写文章</h1>
-    <form @sumbit = "on_submit($event)">
-    <input v-model="current.title" placeholder="标题">
-    <input v-model="current.author" placeholder="作者">
-    <textarea v-model= "curent.content" placeholder="内容" ></textarea>
-    <button type="submit">添加文章</button>
-    </form>
-    </div>
-    `
-    ,
-    data() {
-        return {
-            current: {},
-        };
-    },
+let About = Vue.component('about', {
+    template: `<div><h1>我叫李双的</h1> <button @click="alert()">Yo</button></div>`,
     methods: {
-        on_submit(e) {
-            e.preventDefault();
-
-            
-            http.post('article/create', this.current)
-                .then(res => {
-                    if (res.data.succeed) {
-                        this.current = {};
-                    }
-                });
-        },
+        alert : function() {
+            alert('muhahah')
+        }
+    },
+    data: function () {
+        return {};
     },
 });
+
 
 new Vue({
-    el: '#root',
+    data: {},
+    methods: {},
     router: new VueRouter({
         routes: [
-            { path: '/', component: Home },
-            { path: '/article/new', component: ArticleNew },
-            { path: '/article/:id', component: ArticleDetail },
-        ]
-    })
-})
+            { path: '/home', component: Home },
+            { path: '/about', component: About },
+        ],
+    }),
+}).$mount('#root');
