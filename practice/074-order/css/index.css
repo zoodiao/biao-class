@@ -1,0 +1,40 @@
+.admin .nav {
+    background: #143c67;
+    color: #fbf9f1;
+  }
+  
+  .admin .nav a {
+    display: block;
+    padding: 10px;
+    color: inherit;
+  }
+  
+  .admin .nav a:hover {
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+  }
+  
+  .main {
+    padding: 10px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 10px;
+  }
+  
+  td {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+  }
+  
+  th {
+    border-bottom: 2px solid rgba(0, 0, 0, .1);
+  }
+  
+  tr:hover {
+    background: rgba(0, 0, 0, .05);
+  }
